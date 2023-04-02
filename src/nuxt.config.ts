@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 
   modules: [
     'nuxt-windicss',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@pinia/nuxt',
   ]
 })
