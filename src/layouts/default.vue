@@ -13,12 +13,7 @@
           <button data-tooltip-target="tooltip-dark"
             type="button"
             class="inline-flex items-center p-2 mr-1 text-sm font-medium text-gray-500 rounded-lg dark:text-gray-400 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-            <svg class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-            </svg>
+            <Icon name="ic:baseline-dark-mode" class="w-6 h-6"></Icon>
           </button>
           <div id="tooltip-dark"
             role="tooltip"
@@ -30,14 +25,7 @@
           <button data-tooltip-target="tooltip-statistics"
             type="button"
             class="hidden items-center p-2 text-sm font-medium text-gray-500 rounded-lg lg:inline-flex dark:text-gray-400 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-            <svg class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z">
-              </path>
-            </svg>
+            <Icon name="mdi:report-areaspline" class="w-6 h-6"></Icon>
           </button>
           <div id="tooltip-statistics"
             role="tooltip"
