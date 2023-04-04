@@ -8,14 +8,16 @@
               <h5 class="dark:text-white font-semibold">Ent(ity) Single</h5>
             </div>
           </div>
-          <div v-if="EnableSearch" class="flex flex-col-reverse md:flex-row items-center justify-between md:space-x-4 py-3">
+          <div v-if="EnableSearch"
+            class="flex flex-col-reverse md:flex-row items-center justify-between md:space-x-4 py-3">
             <div class="w-full lg:w-2/3 flex flex-col space-y-3 md:space-y-0 md:flex-row md:items-center">
               <form class="w-full md:max-w-sm flex-1 md:mr-4">
                 <label for="default-search"
                   class="text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <Icon name="ic:baseline-search" class="w-5 h-5 text-gray-500 dark:text-gray-400"></Icon>
+                    <Icon name="ic:baseline-search"
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"></Icon>
                   </div>
                   <input type="search"
                     id="default-search"
@@ -32,9 +34,11 @@
                     data-dropdown-toggle="filterDropdown"
                     type="button"
                     class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                    <Icon name="ic:baseline-filter-alt" class="h-5 w-5 mr-2 text-gray-400"></Icon>
+                    <Icon name="ic:baseline-filter-alt"
+                      class="h-5 w-5 mr-2 text-gray-400"></Icon>
                     Filter
-                    <Icon name="ic:baseline-expand-more" class="-mr-1 ml-1.5 w-5 h-5"></Icon>
+                    <Icon name="ic:baseline-expand-more"
+                      class="-mr-1 ml-1.5 w-5 h-5"></Icon>
                   </button>
                   <div id="filterDropdown"
                     class="z-10 hidden p-3 bg-white rounded-lg shadow w-56 dark:bg-gray-700">
@@ -121,7 +125,8 @@
                     data-dropdown-toggle="configurationDropdown"
                     type="button"
                     class="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                    <Icon name="ic:baseline-settings" class="h-5 w-5 mr-2 text-gray-400"></Icon>
+                    <Icon name="ic:baseline-settings"
+                      class="h-5 w-5 mr-2 text-gray-400"></Icon>
                     Configurations
                   </button>
                   <div id="configurationDropdown"
@@ -151,13 +156,15 @@
               class="w-full md:w-auto flex flex-col md:flex-row mb-3 md:mb-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
               <button type="button"
                 class="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                <Icon name="ic:baseline-add" class="h-5 w-5 mr-2"></Icon>
+                <Icon name="ic:baseline-add"
+                  class="h-5 w-5 mr-2"></Icon>
                 Add new task
               </button>
             </div>
           </div>
         </div>
-        <div v-if="EnableSearch" class="mx-4 pb-3 flex flex-wrap">
+        <div v-if="EnableSearch"
+          class="mx-4 pb-3 flex flex-wrap">
           <div class="hidden md:flex items-center text-sm font-medium text-gray-900 dark:text-white mr-4 mt-3">Show only:
           </div>
           <div class="flex flex-wrap">
