@@ -341,6 +341,5 @@
 </template>
 
 <script setup lang="ts">
-const EnableSearch = inject<Ref<boolean>>('searchable');
-EnableSearch!.value = true;
+useSearchBar();
 </script>
