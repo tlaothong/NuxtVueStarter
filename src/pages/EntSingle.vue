@@ -5,7 +5,7 @@
         <div class="border-b dark:border-gray-700 mx-4">
           <div class="flex items-center justify-between space-x-4 pt-3">
             <div class="flex-1 flex items-center space-x-3">
-              <h5 class="dark:text-white font-semibold">Ent(ity) Single</h5>
+              <h1 class="dark:text-white font-semibold">Ent(ity) Single</h1>
             </div>
           </div>
           <div v-if="EnableSearch"
