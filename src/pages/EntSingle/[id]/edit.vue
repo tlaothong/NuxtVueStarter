@@ -2,7 +2,7 @@
   <section class="bg-white dark:bg-gray-900">
     <div class="max-w-2xl pb-8 mx-auto lg:pb-12">
       <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Update user</h2>
-      <form action="#">
+      <form @submit.prevent="$router.go(-1)">
         <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-6">
           <div>
             <label for="first-name"
