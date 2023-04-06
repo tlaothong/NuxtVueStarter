@@ -33,14 +33,7 @@
         </div>
       </div>
 
-      <dl>
-        <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Email</dt>
-        <dd class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">helene@company.com</dd>
-        <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Biography</dt>
-        <dd class="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">Hello, I'm Helene Engels, USA Designer,
-          Creating things that stand out, Featured by Adobe, Figma, Webflow and others, Daily design tips & resources,
-          Exploring Web3.</dd>
-      </dl>
+      <InfoShort></InfoShort>
 
       <div class="flex justify-between items-center">
         <div class="flex items-center space-x-3 sm:space-x-4">
@@ -72,6 +65,8 @@
 </template>
 
 <script setup lang="ts">
+import { InfoShort } from '../moduleFlow';
+
 const showModal = ref(true);
 const _router = useRouter();
 
