@@ -6,7 +6,7 @@
       <article class="flex">
         <NuxtLink href="#"
           class="shrink-0">
-          <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-3.png"
+          <img src="/imgs/search.jpg"
             class="mr-5 w-32 h-32 max-w-full align-middle rounded-full"
             alt="Image 3">
         </NuxtLink>
@@ -25,7 +25,7 @@
       <article class="flex mt-8">
         <NuxtLink to="EntSingle/list"
           class="shrink-0">
-          <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-2.png"
+          <img src="/imgs/list.jpg"
             class="mr-5 w-32 h-32 max-w-full align-middle rounded-full"
             alt="Image 2">
         </NuxtLink>
@@ -44,7 +44,7 @@
       <article class="flex mt-8">
         <a href="#"
           class="shrink-0">
-          <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/image-1.png"
+          <img src="/imgs/newone.jpg"
             class="mr-5 w-32 h-32 max-w-fullalign-middle rounded-full"
             alt="Image 1">
         </a>
