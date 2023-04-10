@@ -4,7 +4,7 @@
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="https://github.com/tlaothong"
           class="flex items-center">
-          <img src="https://flowbite.com/docs/images/logo.svg"
+          <img src="/imgs/logobigdata.png"
             class="mr-3 h-6 sm:h-9"
             alt="Flowbite Logo" />
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">AppStarter</span>
