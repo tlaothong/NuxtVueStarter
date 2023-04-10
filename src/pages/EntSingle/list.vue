@@ -1,7 +1,6 @@
 <template>
   <div>
 
-
     <ClientOnly>
       <Teleport to="#module-top-bar">
         <div class="flex flex-col-reverse md:flex-row items-center justify-between md:space-x-4 py-3">
@@ -275,6 +274,7 @@
     </nav>
 
     <NuxtPage></NuxtPage>
+
   </div>
 </template>
 

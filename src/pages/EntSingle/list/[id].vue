@@ -5,7 +5,7 @@
     <!-- Modal content -->
     <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
       <!-- Modal header -->
-      <div class="flex justify-between mb-4 rounded-t sm:mb-5">
+      <div class="flex justify-between mb-4 rounded-t sm:mb-5 border-b border-gray-200 dark:border-gray-700">
         <div>
           <h3 class="text-lg font-bold text-gray-900 md:text-xl dark:text-white">
             Helene Engels
