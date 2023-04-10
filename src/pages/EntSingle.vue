@@ -18,9 +18,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-const EnableSearch = ref(false);
-
-provide('searchable', EnableSearch);
-</script>

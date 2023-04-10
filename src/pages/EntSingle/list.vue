@@ -279,6 +279,5 @@
 </template>
 
 <script setup lang="ts">
-import { InfoList } from '@/appModules/EntSingle';
-useSearchBar();
+import { InfoList } from '~/appModules/EntSingle';
 </script>

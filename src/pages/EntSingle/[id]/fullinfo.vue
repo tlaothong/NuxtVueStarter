@@ -134,7 +134,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-useSearchBar({ hide: true })
-</script>

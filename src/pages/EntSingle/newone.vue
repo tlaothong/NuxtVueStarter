@@ -68,6 +68,5 @@
 </template>
 
 <script setup lang="ts">
-useSearchBar({ hide: true })
 const dummy = ref('')
 </script>
