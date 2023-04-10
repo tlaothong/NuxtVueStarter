@@ -12,7 +12,6 @@
 
 <script setup lang="ts">
 import { HeaderBand, FooterBand } from '~/components/layouts/default';
-import { initFlowbite } from 'flowbite/lib/esm/components';
 
-onMounted(() => { initFlowbite() })
+useFlowbite();
 </script>
