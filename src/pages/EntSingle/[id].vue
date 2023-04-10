@@ -3,7 +3,7 @@
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
       <div class="flex items-center space-x-4">
         <img class="mb-4 w-16 h-16 rounded-full sm:w-20 sm:h-20"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
+          src="/imgs/smiley.png"
           alt="Helene avatar">
         <div>
           <h2 class="flex items-center mb-2 text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">

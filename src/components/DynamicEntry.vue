@@ -1,5 +1,5 @@
 <template>
-  <EntryRow v-for="(row, i) in finalSchema" :row="row"></EntryRow>
+  <EntryRow class="gap-4 sm:gap-6 mt-4" v-for="(row, i) in finalSchema" :row="row"></EntryRow>
 </template>
 
 <script setup lang="ts">

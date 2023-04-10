@@ -1,9 +1,7 @@
 export { useModuleStore } from './moduleStore';
 
-import InfoShortVue from './InfoShort.vue';
-import InfoListVue from './InfoList.vue';
-import TopBarVue from './TopBar.vue';
+export { default as InfoShort } from './InfoShort.vue';
+export { default as InfoList } from './InfoList.vue';
+export { default as TopBar } from './TopBar.vue';
 
-export const InfoShort = InfoShortVue;
-export const InfoList = InfoListVue;
-export const TopBar = TopBarVue;
+export { entrySchema, entryRules, entryInitial } from './settings';
