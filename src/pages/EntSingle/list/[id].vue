@@ -65,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { InfoShort } from '../moduleFlow';
+import { InfoShort } from '~/appModules/EntSingle';
 
 const showModal = ref(true);
 const _router = useRouter();

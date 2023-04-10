@@ -1,0 +1,1 @@
+export { InfoShort } from '@/com4ent/EntSingle';

@@ -29,5 +29,5 @@
 </template>
 
 <script setup lang="ts">
-import { InfoShort } from '../moduleFlow';
+import { InfoShort } from '~/appModules/EntSingle';
 </script>
