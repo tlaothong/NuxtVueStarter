@@ -1,3 +1,1 @@
-import { InfoShort_ } from '~/com4ent/EntSingle';
-
-export const InfoShort = InfoShort_;
+export { InfoShort } from '~/com4ent/EntSingle';

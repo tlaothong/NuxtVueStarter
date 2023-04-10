@@ -1,3 +1,3 @@
-import InfoShortVue from './InfoShort';
+import InfoShortVue from './InfoShort.vue';
 
-export const InfoShort_ = InfoShortVue;
+export const InfoShort = InfoShortVue;
