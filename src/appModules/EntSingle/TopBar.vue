@@ -1,0 +1,3 @@
+<template>
+  <ListTopBar></ListTopBar>
+</template>
