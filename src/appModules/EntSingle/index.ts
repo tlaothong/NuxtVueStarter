@@ -1,1 +1,3 @@
-export { InfoShort } from '@/com4ent/EntSingle';
+import InfoShortVue from './InfoShort.vue';
+
+export const InfoShort = InfoShortVue;
