@@ -18,8 +18,6 @@
           <th scope="col"
             class="px-4 py-3">Status</th>
           <th scope="col"
-            class="px-4 py-3">Users</th>
-          <th scope="col"
             class="px-4 py-3 min-w-[14rem]">Progress</th>
           <th scope="col"
             class="px-4 py-3">Preview</th>
@@ -53,21 +51,6 @@
             <span
               class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">In
               progress</span>
-          </td>
-          <td class="px-4 py-2 whitespace-nowrap">
-            <div class="flex -space-x-4 w-28">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-10.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-1.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-3.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <a href="#"
-                class="flex-shrink-0 flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-900 dark:bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800">+5</a>
-            </div>
           </td>
           <td class="px-4 py-2 font-medium whitespace-nowrap">
             <div class="flex justify-end mb-1">
@@ -173,21 +156,6 @@
           <td class="px-4 py-2 whitespace-nowrap">
             <span
               class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Completed</span>
-          </td>
-          <td class="px-4 py-2 whitespace-nowrap">
-            <div class="flex -space-x-4 w-28">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-6.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-7.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/avatar-2.png"
-                alt=""
-                class="w-10 h-10 flex-shrink-0 border-2 border-white rounded-full dark:border-gray-800">
-              <a href="#"
-                class="flex-shrink-0 flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-900 dark:bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800">+2</a>
-            </div>
           </td>
           <td class="px-4 py-2 font-medium whitespace-nowrap">
             <div class="flex justify-end mb-1">
