@@ -25,7 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import { entrySchema as schema, entryRules, entryInitial } from '~/appModules/EntSingle';
+import { entrySchema as schema, entryRules, useModuleStore } from '~/appModules/EntSingle';
 
-const { data, entry } = useFormEntry(entryInitial, entryRules);
+const route = useRoute();
+const moduleStore = useModuleStore();
+const savedEntry = await moduleStore.getEntity(route.params.id);
+const { data, entry } = useFormEntry(savedEntry, entryRules);
 </script>

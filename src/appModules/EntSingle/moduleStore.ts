@@ -30,5 +30,21 @@ export const useModuleStore = defineStore(moduleName, () => {
     return newid;
   }
 
-  return { dataList, loadDataList, addOne }
+  async function getEntity(id:any) {
+    const { data, error } = await useFetch(`${apiBaseUrl}/${id}`, {
+      method: 'GET',
+      headers: { "Accept": "application/json" },
+    });
+
+    return data.value as IEntityModel;
+  }
+
+  interface IEntityModel {
+    fname: string;
+    lname: string;
+    bio: string;
+    region: string;
+  }
+
+  return { dataList, loadDataList, addOne, getEntity }
 })
