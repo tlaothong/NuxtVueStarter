@@ -37,12 +37,12 @@ const guests = [
 ]
 const currentRoom = ref(201);
 
-let toggle = true;
+let toggle = false;
 const clickGuest = (g: any) => {
   g.room = currentRoom.value;
-  toggle = !toggle;
   if (toggle) {
     currentRoom.value++;
   }
+  toggle = !toggle;
 }
 </script>
