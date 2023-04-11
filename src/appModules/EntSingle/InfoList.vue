@@ -94,5 +94,4 @@ const moduleStore = useModuleStore();
 const { dataList } = storeToRefs(moduleStore);
 
 await moduleStore.loadDataList();
-console.log(dataList.value);
 </script>
