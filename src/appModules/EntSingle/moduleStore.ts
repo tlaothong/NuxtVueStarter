@@ -8,24 +8,27 @@ export const useModuleStore = defineStore(moduleName, () => {
 
   async function loadDataList(pageNo?: number) {
     const page2Load = (pageNo ?? curPageNo.value) - startPageNo;
-    const { data, error } = await useFetch(apiBaseUrl);
+    const { data, error } = await useFetch(apiBaseUrl, {
+      method: 'GET',
+      headers: { "Accept": "application/json" },
+    });
 
-    dataList.value = error ? [] : data.value as any[];
+    dataList.value = !error.value ? data.value as any[] : [];
   }
 
-  async function addOne(newItem:any) {
-    const one = {...newItem};
+  async function addOne(newItem: any) {
+    const one = { ...newItem };
     const { data, error } = await useFetch(apiBaseUrl, {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(one),
     });
-    const newid = (<any>data.value).id;    
+    const newid = (<any>data.value).id;
     newItem.id = one.id = newid;
     dataList.value.push(one);
 
     return newid;
   }
-  
+
   return { dataList, loadDataList, addOne }
 })

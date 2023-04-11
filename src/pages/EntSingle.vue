@@ -5,7 +5,7 @@
         <div class="border-b dark:border-gray-700 mx-4">
           <div class="flex items-center justify-between space-x-4 pt-3">
             <div class="flex-1 flex items-center space-x-3">
-              <h1 class="dark:text-white font-semibold">Ent(ity) Single</h1>
+              <h1 class="dark:text-white font-semibold">{{ Labels.ModuleTitle }}</h1>
             </div>
           </div>
 
@@ -18,3 +18,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { Labels } from '~/appModules/EntSingle';
+</script>
