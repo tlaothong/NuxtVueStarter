@@ -9,7 +9,7 @@
     <section class="bg-white dark:bg-gray-900">
       <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
         <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new user</h2>
-        <FormRoot @submit="navigateTo('/EntSingle/id123')">
+        <FormRoot @submit="handleSubmit">
           <DynamicEntry :entry="entry"
             :schema="schema"></DynamicEntry>
           <button type="submit"
@@ -23,7 +23,13 @@
 </template>
 
 <script setup lang="ts">
-import { entrySchema as schema, entryRules, entryInitial } from '~/appModules/EntSingle';
+import { entrySchema as schema, entryRules, entryInitial, useModuleStore } from '~/appModules/EntSingle';
 
 const { data, entry } = useFormEntry(entryInitial, entryRules);
+
+const moduleStore = useModuleStore();
+const handleSubmit = async () => {
+  await moduleStore.addOne({ ...data });
+  navigateTo('/EntSingle/id123');
+}
 </script>

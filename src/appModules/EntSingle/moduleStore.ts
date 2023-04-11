@@ -8,10 +8,14 @@ export const useModuleStore = defineStore(moduleName, () => {
 
   async function loadDataList(pageNo?: number) {
     const page2Load = (pageNo ?? curPageNo.value) - startPageNo;
-    const { data } = await useFetch(apiBaseUrl);
+    const { data, error } = await useFetch(apiBaseUrl);
 
-    dataList.value = data.value as any[];
+    dataList.value = error ? [] : data.value as any[];
+  }
+
+  async function addOne(newItem:any) {
+    dataList.value.push(newItem);
   }
   
-  return { dataList, loadDataList }
+  return { dataList, loadDataList, addOne }
 })
