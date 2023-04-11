@@ -14,7 +14,17 @@ export const useModuleStore = defineStore(moduleName, () => {
   }
 
   async function addOne(newItem:any) {
-    dataList.value.push(newItem);
+    const one = {...newItem};
+    const { data, error } = await useFetch(apiBaseUrl, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(one),
+    });
+    const newid = (<any>data.value).id;    
+    newItem.id = one.id = newid;
+    dataList.value.push(one);
+
+    return newid;
   }
   
   return { dataList, loadDataList, addOne }

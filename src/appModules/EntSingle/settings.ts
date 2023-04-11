@@ -2,7 +2,7 @@ import { InputText, InputTextArea, InputSelect } from '~/dynaui';
 import { required } from '@vuelidate/validators';
 
 export const moduleName = "ent-single-example1";
-export const apiBaseUrl = "https://localhost:7169/WeatherForecast";
+export const apiBaseUrl = "http://localhost:5000/api/demo";
 export const startPageNo = 1;
 
 export const entrySchema = [

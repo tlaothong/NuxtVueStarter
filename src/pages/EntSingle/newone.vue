@@ -29,7 +29,7 @@ const { data, entry } = useFormEntry(entryInitial, entryRules);
 
 const moduleStore = useModuleStore();
 const handleSubmit = async () => {
-  await moduleStore.addOne({ ...data });
-  navigateTo('/EntSingle/id123');
+  const newid = await moduleStore.addOne(data.value);
+  navigateTo(`/EntSingle/${newid}`);
 }
 </script>
