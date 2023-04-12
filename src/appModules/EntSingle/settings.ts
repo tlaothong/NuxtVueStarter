@@ -53,6 +53,12 @@ export const dataListSetup = [
   { title: 'Region', model: 'region' },
 ]
 
+export const dataFullSetup = [
+  { title: 'First Name', model: 'fname' },
+  { title: 'Last Name', model: 'lname' },
+  { title: 'Region', model: 'region' },
+]
+
 const entityTitle = 'ผู้สมัคร';
 export const Labels = {
   ModuleTitle: 'Ent(ity) Single',
