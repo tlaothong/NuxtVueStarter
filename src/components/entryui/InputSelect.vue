@@ -39,7 +39,7 @@ const dropDownText = ref(props.placeholder);
 const dropDownValue = useVModel(props, 'modelValue', emits);
 
 const changeDropDownText = (text: string) => {
-  dropDownText.value = text;
+  dropDownText.value = text ?? props.placeholder;
 }
 changeDropDownText(props.modelValue);
 /*
