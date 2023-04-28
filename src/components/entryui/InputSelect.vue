@@ -6,9 +6,8 @@
     </label>
     <o-dropdown aria-role="list"
       :id="uuid"
-      :model-value="modelValue"
       itemActiveClass="bg-red-500"
-      @update:modelValue="emits('update:modelValue', $event)">
+      v-model="dropDownValue">
       <template #trigger="{ active }">
         <button id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
@@ -33,13 +32,16 @@
 </template>
 
 <script setup lang="ts">
+import { useVModel } from '@vueuse/core';
 const props = defineProps<{ label: string, modelValue: string, uuid: string, placeholder?: string, choices: any[] }>();
 const emits = defineEmits(['update:modelValue']);
 const dropDownText = ref(props.placeholder);
+const dropDownValue = useVModel(props, 'modelValue', emits);
 
 const changeDropDownText = (text: string) => {
   dropDownText.value = text;
 }
+changeDropDownText(props.modelValue);
 /*
 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 */

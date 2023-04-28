@@ -2,7 +2,7 @@
   <section class="bg-white dark:bg-gray-900">
     <div class="max-w-2xl pb-6 mx-auto lg:pb-8">
       <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Update user</h2>
-      <FormRoot @submit="$router.go(-1)">
+      <FormRoot @submit="handleSubmit">
         <DynamicEntry :entry="entry"
           :schema="schema"></DynamicEntry>
 
@@ -28,7 +28,12 @@
 import { entrySchema as schema, entryRules, useModuleStore } from '~/appModules/EntSingle';
 
 const route = useRoute();
+const router = useRouter();
 const moduleStore = useModuleStore();
 const savedEntry = await moduleStore.getEntity(route.params.id);
 const { data, entry } = useFormEntry(savedEntry, entryRules);
+const handleSubmit = async () => {
+  await moduleStore.updateOne(data.value);
+  router.go(-1);
+}
 </script>
