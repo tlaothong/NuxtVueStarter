@@ -32,13 +32,24 @@ export const useModuleStore = defineStore(moduleName, () => {
 
   async function updateOne(dataItem: any) {
     const one = { ...dataItem };
-    const { data, error } = await useFetch(apiBaseUrl + `/${one.id}`, {
+    const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
       method: 'PUT',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(one),
     });
     const elemIndex = dataList.value.findIndex(it => it.id == one.id);
-    dataList.value.splice(elemIndex, 1, one);
+    dataList.value = dataList.value.splice(elemIndex, 1, one);
+  }
+
+  async function deleteOne(dataItem: any) {
+    const one = { ...dataItem };
+    const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
+      method: 'DELETE',
+      // headers: { "Content-Type": "application/json" },
+      // body: JSON.stringify(one),
+    });
+    const elemIndex = dataList.value.findIndex(it => it.id == one.id);
+    dataList.value = dataList.value.splice(elemIndex, 1);
   }
 
   async function getEntity(id:any) {
@@ -57,5 +68,5 @@ export const useModuleStore = defineStore(moduleName, () => {
     region: string;
   }
 
-  return { dataList, loadDataList, addOne, getEntity, updateOne }
+  return { dataList, loadDataList, addOne, getEntity, updateOne, deleteOne }
 })
