@@ -45,12 +45,12 @@ export function createStore(storeName: string, dataName: string) {
 
     const activeId = ref<string>('');
 
-    async function getOne(id: string = '') {
+    async function getOne(id: string | string[] = '') {
       if (!id)
         id = activeId.value;
 
       if (id !== activeId.value)
-        activeId.value = id;
+        activeId.value = id as string;
 
       const { data } = await useFetch(`${dataName}/${id}`, {
         baseURL: ApiBaseUrl,

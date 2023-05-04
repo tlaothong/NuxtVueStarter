@@ -1,72 +1,75 @@
+import { createStore } from '~/stores/creator';
 import { moduleName, startPageNo, apiBaseUrl } from './settings';
-import { defineStore } from "pinia";
+// import { defineStore } from "pinia";
 
-export const useModuleStore = defineStore(moduleName, () => {
+export const useModuleStore = createStore(moduleName, moduleName);
 
-  const dataList = ref<any[]>([]);
-  const curPageNo = ref(startPageNo);
+// const XuseModuleStore = defineStore(moduleName, () => {
 
-  async function loadDataList(pageNo?: number) {
-    const page2Load = (pageNo ?? curPageNo.value) - startPageNo;
-    const { data, error } = await useFetch(apiBaseUrl, {
-      method: 'GET',
-      headers: { "Accept": "application/json" },
-    });
+//   const dataList = ref<any[]>([]);
+//   const curPageNo = ref(startPageNo);
 
-    dataList.value = !error.value ? data.value as any[] : [];
-  }
+//   async function loadList(pageNo?: number) {
+//     const page2Load = (pageNo ?? curPageNo.value) - startPageNo;
+//     const { data, error } = await useFetch(apiBaseUrl, {
+//       method: 'GET',
+//       headers: { "Accept": "application/json" },
+//     });
 
-  async function addOne(newItem: any) {
-    const one = { ...newItem };
-    const { data, error } = await useFetch(apiBaseUrl, {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(one),
-    });
-    const newid = (<any>data.value).id;
-    newItem.id = one.id = newid;
-    dataList.value.push(one);
+//     dataList.value = !error.value ? data.value as any[] : [];
+//   }
 
-    return newid;
-  }
+//   async function postOne(newItem: any) {
+//     const one = { ...newItem };
+//     const { data, error } = await useFetch(apiBaseUrl, {
+//       method: 'POST',
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(one),
+//     });
+//     const newid = (<any>data.value).id;
+//     newItem.id = one.id = newid;
+//     dataList.value.push(one);
 
-  async function updateOne(dataItem: any) {
-    const one = { ...dataItem };
-    const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
-      method: 'PUT',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(one),
-    });
-    const elemIndex = dataList.value.findIndex(it => it.id == one.id);
-    dataList.value = dataList.value.splice(elemIndex, 1, one);
-  }
+//     return newid;
+//   }
 
-  async function deleteOne(dataItem: any) {
-    const one = { ...dataItem };
-    const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
-      method: 'DELETE',
-      // headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify(one),
-    });
-    const elemIndex = dataList.value.findIndex(it => it.id == one.id);
-    dataList.value = dataList.value.splice(elemIndex, 1);
-  }
+//   async function putOne(dataItem: any) {
+//     const one = { ...dataItem };
+//     const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
+//       method: 'PUT',
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(one),
+//     });
+//     const elemIndex = dataList.value.findIndex(it => it.id == one.id);
+//     dataList.value = dataList.value.splice(elemIndex, 1, one);
+//   }
 
-  async function getEntity(id:any) {
-    const { data, error } = await useFetch(`${apiBaseUrl}/${id}`, {
-      method: 'GET',
-      headers: { "Accept": "application/json" },
-    });
+//   async function deleteOne(dataItem: any) {
+//     const one = { ...dataItem };
+//     const { data, error } = await useFetch(`${apiBaseUrl}/${one.id}`, {
+//       method: 'DELETE',
+//       // headers: { "Content-Type": "application/json" },
+//       // body: JSON.stringify(one),
+//     });
+//     const elemIndex = dataList.value.findIndex(it => it.id == one.id);
+//     dataList.value = dataList.value.splice(elemIndex, 1);
+//   }
 
-    return data.value as IEntityModel;
-  }
+//   async function getOne(id:any) {
+//     const { data, error } = await useFetch(`${apiBaseUrl}/${id}`, {
+//       method: 'GET',
+//       headers: { "Accept": "application/json" },
+//     });
 
-  interface IEntityModel {
-    fname: string;
-    lname: string;
-    bio: string;
-    region: string;
-  }
+//     return data.value as IEntityModel;
+//   }
 
-  return { dataList, loadDataList, addOne, getEntity, updateOne, deleteOne }
-})
+//   interface IEntityModel {
+//     fname: string;
+//     lname: string;
+//     bio: string;
+//     region: string;
+//   }
+
+//   return { dataList, loadList: loadList, postOne: postOne, getOne, putOne: putOne, deleteOne }
+// })

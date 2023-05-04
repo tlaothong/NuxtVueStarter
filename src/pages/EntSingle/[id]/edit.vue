@@ -30,10 +30,10 @@ import { entrySchema as schema, entryRules, useModuleStore } from '~/appModules/
 const route = useRoute();
 const router = useRouter();
 const moduleStore = useModuleStore();
-const savedEntry = await moduleStore.getEntity(route.params.id);
+const savedEntry = await moduleStore.getOne(route.params.id);
 const { data, entry } = useFormEntry(savedEntry, entryRules);
 const handleSubmit = async () => {
-  await moduleStore.updateOne(data.value);
+  await moduleStore.putOne(data.value);
   router.go(-1);
 }
 </script>

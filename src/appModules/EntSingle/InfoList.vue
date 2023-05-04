@@ -93,5 +93,5 @@ import { useModuleStore } from './moduleStore';
 const moduleStore = useModuleStore();
 const { dataList } = storeToRefs(moduleStore);
 
-await moduleStore.loadDataList();
+await moduleStore.loadList();
 </script>

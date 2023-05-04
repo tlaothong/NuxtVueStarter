@@ -15,5 +15,5 @@
 import { useModuleStore } from '~/appModules/EntSingle';
 const route = useRoute();
 const moduleStore = useModuleStore();
-const data = await moduleStore.getEntity(route.params.id);
+const data = await moduleStore.getOne(route.params.id);
 </script>
