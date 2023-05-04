@@ -121,7 +121,7 @@
 import { useModuleStore, dataFullSetup } from '~/appModules/EntSingle';
 const route = useRoute();
 const moduleStore = useModuleStore();
-const data = await moduleStore.getOne(route.params.id) as any;
+const data = await moduleStore.getOne(route.params.id as string) as any;
 const deleteEntity = async () => {
   await moduleStore.deleteOne(data.id);
   navigateTo('/EntSingle/list');

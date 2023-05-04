@@ -45,7 +45,7 @@ export function createStore(storeName: string, dataName: string) {
 
     const activeId = ref<string>('');
 
-    async function getOne(id: string | string[] = '') {
+    async function getOne(id: string = '') {
       if (!id)
         id = activeId.value;
 
